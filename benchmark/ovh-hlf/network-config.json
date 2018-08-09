@@ -264,14 +264,16 @@
     "endorsement-policy": {
     },
     "context": {
-      "open": "mainchannel",
-      "query": "mainchannel"
+      "getContractDefinition": "mainchannel",
+      "queryAll": "mainchannel",
+      "query": "mainchannel",
+      "put": "mainchannel"
     }
   },
   "info" : {
     "Version": "1.1.0",
     "Size": "20 Peers",
-    "Orderer": "Solo",
+    "Orderer": "BFT-SMaRt",
     "Distribution": "Single Host"
   }
 }
