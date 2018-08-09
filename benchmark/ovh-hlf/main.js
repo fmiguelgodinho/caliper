@@ -8,31 +8,30 @@
 
 'use strict';
 
-const log = require('../../src/comm/util.js').log;
+const Util = require('../../src/comm/util');
+
 let configFile;
 let networkFile;
+
 /**
- * sets the config file
- * @param {string} file indicates config file name
- * @returns {void}
- **/
+ * Set benchmark config file
+ * @param {*} file config file of the benchmark,  default is config.json
+ */
 function setConfig(file) {
     configFile = file;
 }
 
 /**
- * sets the network file
- * @param {string} file indicates network file name
- * @returns {void}
- **/
+ * Set benchmark network file
+ * @param {*} file config file of the blockchain system, eg: fabric.json
+ */
 function setNetwork(file) {
     networkFile = file;
 }
 
 /**
- * iniate and starts the benchmark test with input config params
- * @returns {void}
- **/
+ * Entry point of the Benchmarking script.
+ */
 function main() {
     let program = require('commander');
     program.version('0.1')
@@ -40,8 +39,8 @@ function main() {
         .option('-n, --network <file>', 'config file of the blockchain system under test, if not provided, blockchain property in benchmark config is used', setNetwork)
         .parse(process.argv);
 
-    let path = require('path');
-    let fs = require('fs-extra');
+    const path = require('path');
+    const fs = require('fs-extra');
     let absConfigFile;
     if(typeof configFile === 'undefined') {
         absConfigFile = path.join(__dirname, 'config.json');
@@ -50,7 +49,7 @@ function main() {
         absConfigFile = path.join(__dirname, configFile);
     }
     if(!fs.existsSync(absConfigFile)) {
-        log('file ' + absConfigFile + ' does not exist');
+        Util.log('file ' + absConfigFile + ' does not exist');
         return;
     }
 
@@ -62,7 +61,7 @@ function main() {
             absNetworkFile = path.join(absCaliperDir, config.blockchain.config);
         }
         catch(err) {
-            log('failed to find blockchain.config in ' + absConfigFile);
+            Util.log('failed to find blockchain.config in ' + absConfigFile);
             return;
         }
     }
@@ -70,13 +69,32 @@ function main() {
         absNetworkFile = path.join(__dirname, networkFile);
     }
     if(!fs.existsSync(absNetworkFile)) {
-        log('file ' + absNetworkFile + ' does not exist');
+        Util.log('file ' + absNetworkFile + ' does not exist');
         return;
     }
 
 
-    let framework = require('../../src/comm/bench-flow.js');
+    const framework = require('../../src/comm/bench-flow.js');
     framework.run(absConfigFile, absNetworkFile);
 }
 
 main();
+
+
+
+
+
+
+/*
+var config_path;
+if(process.argv.length < 3) {
+    config_path = path.join(__dirname, 'config.json');
+}
+else {
+    config_path = path.join(__dirname, process.argv[2]);
+}
+
+// use default framework to run the tests
+var framework = require('../../src/comm/bench-flow.js');
+framework.run(config_path);
+*/

@@ -13,16 +13,17 @@ module.exports.info  = 'querying accounts';
 let bc, contx;
 let accounts;
 module.exports.init = function(blockchain, context, args) {
-    let acc = require('./smallbankOperations.js');
+    const open = require('./open.js');
     bc       = blockchain;
     contx    = context;
-    accounts = acc.account_array;
+    accounts = open.accounts;
     return Promise.resolve();
 };
 
 module.exports.run = function() {
-    let acc_num  = accounts[Math.floor(Math.random()*(accounts.length))];
-    return bc.queryState(contx, 'smallbank', 'v0', acc_num);
+    const acc  = accounts[Math.floor(Math.random()*(accounts.length))];
+
+    return bc.queryState(contx, 'simple', 'v0', acc);
 };
 
 module.exports.end = function() {

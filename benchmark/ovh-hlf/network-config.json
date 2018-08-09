@@ -1,0 +1,277 @@
+{
+  "fabric": {
+    "cryptodir": "/home/fgodinho/workspace/src/bootstrap/crypto-config",
+    "network": {
+      "orderer": {
+        "url": "grpcs://51.255.64.183:7050",
+        "mspid": "OrdererMSP",
+        "domain": "consensus.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/ordererOrganizations/consensus.com/msp/",
+        "server-hostname": "orderer0.consensus.com",
+        "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/ordererOrganizations/consensus.com/orderers/orderer0.consensus.com/tls/ca.crt"
+      },
+      "org1": {
+        "name": "PeersA",
+        "mspid": "PeersAMSP",
+        "domain": "blockchain-a.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-a.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:7051",
+          "events": "grpcs://51.255.64.183:7053",
+          "server-hostname": "peer0.blockchain-a.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-a.com/peers/peer0.blockchain-a.com/tls/ca.crt"
+        }
+      },
+      "org2": {
+        "name": "PeersB",
+        "mspid": "PeersBMSP",
+        "domain": "blockchain-b.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-b.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:10051",
+          "events": "grpcs://51.255.64.183:10053",
+          "server-hostname": "peer0.blockchain-b.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-b.com/peers/peer0.blockchain-b.com/tls/ca.crt"
+        }
+      },
+      "org3": {
+        "name": "PeersC",
+        "mspid": "PeersCMSP",
+        "domain": "blockchain-c.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-c.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:8051",
+          "events": "grpcs://51.255.64.183:8053",
+          "server-hostname": "peer0.blockchain-c.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-c.com/peers/peer0.blockchain-c.com/tls/ca.crt"
+        }
+      },
+      "org4": {
+        "name": "PeersD",
+        "mspid": "PeersDMSP",
+        "domain": "blockchain-d.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-d.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:9051",
+          "events": "grpcs://51.255.64.183:9053",
+          "server-hostname": "peer0.blockchain-d.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-d.com/peers/peer0.blockchain-d.com/tls/ca.crt"
+        }
+      },
+      "org5": {
+        "name": "PeersE",
+        "mspid": "PeersEMSP",
+        "domain": "blockchain-e.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-e.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:11051",
+          "events": "grpcs://51.255.64.183:11053",
+          "server-hostname": "peer0.blockchain-e.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-e.com/peers/peer0.blockchain-e.com/tls/ca.crt"
+        }
+      },
+      "org6": {
+        "name": "PeersF",
+        "mspid": "PeersFMSP",
+        "domain": "blockchain-f.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-f.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:12051",
+          "events": "grpcs://51.255.64.183:12053",
+          "server-hostname": "peer0.blockchain-f.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-f.com/peers/peer0.blockchain-f.com/tls/ca.crt"
+        }
+      },
+      "org7": {
+        "name": "PeersG",
+        "mspid": "PeersGMSP",
+        "domain": "blockchain-g.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-g.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:13051",
+          "events": "grpcs://51.255.64.183:13053",
+          "server-hostname": "peer0.blockchain-g.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-g.com/peers/peer0.blockchain-g.com/tls/ca.crt"
+        }
+      },
+      "org8": {
+        "name": "PeersH",
+        "mspid": "PeersHMSP",
+        "domain": "blockchain-h.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-h.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:14051",
+          "events": "grpcs://51.255.64.183:14053",
+          "server-hostname": "peer0.blockchain-h.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-h.com/peers/peer0.blockchain-h.com/tls/ca.crt"
+        }
+      },
+      "org9": {
+        "name": "PeersI",
+        "mspid": "PeersIMSP",
+        "domain": "blockchain-i.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-i.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:15051",
+          "events": "grpcs://51.255.64.183:15053",
+          "server-hostname": "peer0.blockchain-i.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-i.com/peers/peer0.blockchain-i.com/tls/ca.crt"
+        }
+      },
+      "org10": {
+        "name": "PeersJ",
+        "mspid": "PeersJMSP",
+        "domain": "blockchain-j.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-j.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:16051",
+          "events": "grpcs://51.255.64.183:16053",
+          "server-hostname": "peer0.blockchain-j.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-j.com/peers/peer0.blockchain-j.com/tls/ca.crt"
+        }
+      },
+      "org11": {
+        "name": "PeersK",
+        "mspid": "PeersKMSP",
+        "domain": "blockchain-k.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-k.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:26051",
+          "events": "grpcs://51.255.64.183:26053",
+          "server-hostname": "peer0.blockchain-k.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-k.com/peers/peer0.blockchain-k.com/tls/ca.crt"
+        }
+      },
+      "org12": {
+        "name": "PeersL",
+        "mspid": "PeersLMSP",
+        "domain": "blockchain-l.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-l.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:17051",
+          "events": "grpcs://51.255.64.183:17053",
+          "server-hostname": "peer0.blockchain-l.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-l.com/peers/peer0.blockchain-l.com/tls/ca.crt"
+        }
+      },
+      "org13": {
+        "name": "PeersM",
+        "mspid": "PeersMMSP",
+        "domain": "blockchain-m.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-m.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:18051",
+          "events": "grpcs://51.255.64.183:18053",
+          "server-hostname": "peer0.blockchain-m.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-m.com/peers/peer0.blockchain-m.com/tls/ca.crt"
+        }
+      },
+      "org14": {
+        "name": "PeersN",
+        "mspid": "PeersNMSP",
+        "domain": "blockchain-n.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-n.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:19051",
+          "events": "grpcs://51.255.64.183:19053",
+          "server-hostname": "peer0.blockchain-n.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-n.com/peers/peer0.blockchain-n.com/tls/ca.crt"
+        }
+      },
+      "org15": {
+        "name": "PeersO",
+        "mspid": "PeersOMSP",
+        "domain": "blockchain-o.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-o.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:20051",
+          "events": "grpcs://51.255.64.183:20053",
+          "server-hostname": "peer0.blockchain-o.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-o.com/peers/peer0.blockchain-o.com/tls/ca.crt"
+        }
+      },
+      "org16": {
+        "name": "PeersP",
+        "mspid": "PeersPMSP",
+        "domain": "blockchain-p.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-p.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:21051",
+          "events": "grpcs://51.255.64.183:21053",
+          "server-hostname": "peer0.blockchain-p.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-p.com/peers/peer0.blockchain-p.com/tls/ca.crt"
+        }
+      },
+      "org17": {
+        "name": "PeersQ",
+        "mspid": "PeersQMSP",
+        "domain": "blockchain-q.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-q.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:22051",
+          "events": "grpcs://51.255.64.183:22053",
+          "server-hostname": "peer0.blockchain-q.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-q.com/peers/peer0.blockchain-q.com/tls/ca.crt"
+        }
+      },
+      "org18": {
+        "name": "PeersR",
+        "mspid": "PeersRMSP",
+        "domain": "blockchain-r.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-r.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:23051",
+          "events": "grpcs://51.255.64.183:23053",
+          "server-hostname": "peer0.blockchain-r.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-r.com/peers/peer0.blockchain-r.com/tls/ca.crt"
+        }
+      },
+      "org19": {
+        "name": "PeersS",
+        "mspid": "PeersSMSP",
+        "domain": "blockchain-s.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-s.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:24051",
+          "events": "grpcs://51.255.64.183:24053",
+          "server-hostname": "peer0.blockchain-s.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-s.com/peers/peer0.blockchain-s.com/tls/ca.crt"
+        }
+      },
+      "org20": {
+        "name": "PeersT",
+        "mspid": "PeersTMSP",
+        "domain": "blockchain-t.com",
+        "msp": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-t.com/msp",
+        "peer1": {
+          "requests": "grpcs://51.255.64.183:25051",
+          "events": "grpcs://51.255.64.183:25053",
+          "server-hostname": "peer0.blockchain-t.com",
+          "tls_cacerts": "/home/fgodinho/workspace/src/bootstrap/crypto-config/peerOrganizations/blockchain-t.com/peers/peer0.blockchain-t.com/tls/ca.crt"
+        }
+      }
+    },
+    "channel": [
+      {
+        "name": "mainchannel",
+        "config": "/home/fgodinho/workspace/src/bootstrap/channel-artifacts/channel.tx",
+        "organizations": ["org1", "org2", "org3", "org4", "org5", "org6", "org7", "org8", "org9", "org10", "org11", "org12", "org13", "org14", "org15", "org16", "org17", "org18", "org19", "org20"],
+        "deployed": true
+      }
+    ],
+    "chaincodes": [
+    ],
+    "endorsement-policy": {
+    },
+    "context": {
+      "open": "mainchannel",
+      "query": "mainchannel"
+    }
+  },
+  "info" : {
+    "Version": "1.1.0",
+    "Size": "20 Peers",
+    "Orderer": "Solo",
+    "Distribution": "Single Host"
+  }
+}
