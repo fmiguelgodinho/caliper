@@ -8,15 +8,17 @@
     "description" : "This is an example benchmark for caliper, to test the backend DLT's performance with simple account opening & querying transactions",
     "clients": {
       "type": "local",
-      "number": 5
+      "number": 1
     },
     "rounds": [
       {
-        "label" : "getContractDefinition",
-        "txNumber" : [1],
+        "label" : "queryAll",
+
+        "txNumber" : [100],
         "rateControl" : [{"type": "fixed-rate", "opts": {"tps" : 1}}],
-        "callback" : "benchmark/ovh-hlf/getContractDefinition.js"
-      }]
+        "callback" : "benchmark/ovh-hlf/queryAll.js"
+      }
+    ]
   },
   "monitor": {
     "type": ["docker", "process"],
