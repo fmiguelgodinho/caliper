@@ -255,7 +255,7 @@
       {
         "name": "mainchannel",
         "config": "/home/fgodinho/workspace/src/bootstrap/channel-artifacts/channel.tx",
-        "organizations": ["org1", "org2", "org3", "org4", "org5", "org6", "org7", "org8", "org9", "org10"],
+        "organizations": ["org1", "org2", "org3", "org4", "org5", "org6", "org7"],
         "deployed": true
       }
     ],

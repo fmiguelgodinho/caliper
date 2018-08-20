@@ -20,8 +20,8 @@ module.exports.init = function(blockchain, context, args) {
 
 module.exports.run = function() {
 
-
-    return bc.invokeSmartContract(contx, 'xcc', 'v1', {verb : 'put', id: "1", payload: "lorem ipsum"}, 120)
+    let randomId = Math.round((Math.random() * 100000000000)).toString()
+    return bc.invokeSmartContract(contx, 'xcc', 'v1', {verb : 'put', id: randomId, payload: "lorem ipsum"}, 120)
       .then((results)=>{
           for (let i in results) {
               let stat = results[i];
