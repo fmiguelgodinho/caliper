@@ -15,7 +15,7 @@
         "label" : "queryAll",
 
         "txNumber" : [100],
-        "rateControl" : [{"type": "fixed-rate", "opts": {"tps" : 1}}],
+        "rateControl" : [{"type": "fixed-rate", "opts": {"tps" : 5}}],
         "callback" : "benchmark/ovh-hlf/queryAll.js"
       }
     ]

@@ -15,7 +15,7 @@
         "label" : "put",
 
         "txNumber" : [100],
-        "rateControl" : [{"type": "fixed-rate", "opts": {"tps" : 3}}],
+        "rateControl" : [{"type": "fixed-rate", "opts": {"tps" : 4}}],
         "callback" : "benchmark/ovh-hlf/put.js"
       }
     ]
