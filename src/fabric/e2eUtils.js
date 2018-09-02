@@ -614,7 +614,7 @@ async function invokebycontext(context, id, version, args, timeout){
                 invokeStatus.SetErrMsg(TxErrorIndex.BadProposalResponseError, err.toString());
                 // explicit rejection, early life-cycle termination, definitely failed
                 invokeStatus.SetVerification(true);
-                throw err;
+                //throw err;
             }
             allGood = allGood && one_good;
         }
@@ -685,6 +685,7 @@ async function invokebycontext(context, id, version, args, timeout){
         let broadcastResponse;
         try {
             broadcastResponse = await channel.sendTransaction(transactionRequest);
+            commUtils.log('Sent transaction!');
         } catch (err) {
             // missing the ACK does not mean anything, the Tx could be already under ordering
             // so let the events decide the final status, but log this error
